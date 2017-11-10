@@ -5,8 +5,12 @@
   },
   "data" : [
     {
+      "idiom" : "universal"
+    },
+    {
       "idiom" : "universal",
-      "filename" : "Button-NewList.svg"
+      "filename" : "Button-NewList.svg",
+      "unassigned" : true
     }
   ]
 }

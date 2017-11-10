@@ -24,6 +24,7 @@
 		A879017A1E75FB0C000068D1 /* PopUpViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87901791E75FB0C000068D1 /* PopUpViewVC.swift */; };
 		A8D91AE31E712CD600E9CFEC /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D91AE11E712CD500E9CFEC /* Business.swift */; };
 		A8D91AE41E712CD600E9CFEC /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D91AE21E712CD600E9CFEC /* YelpClient.swift */; };
+		A8D9661F1E8AA14A00C8B116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9661E1E8AA14A00C8B116 /* CustomTabBarController.swift */; };
 		F20CA4BA5EC66954F4BB60BC /* Pods_TriedThatPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3732DF73CB9C0E0FD8CF40F /* Pods_TriedThatPlace.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		A87901791E75FB0C000068D1 /* PopUpViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewVC.swift; sourceTree = "<group>"; };
 		A8D91AE11E712CD500E9CFEC /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		A8D91AE21E712CD600E9CFEC /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		A8D9661E1E8AA14A00C8B116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D3732DF73CB9C0E0FD8CF40F /* Pods_TriedThatPlace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriedThatPlace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		A8D91AE61E712D3000E9CFEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8D9661E1E8AA14A00C8B116 /* CustomTabBarController.swift */,
 				A87901791E75FB0C000068D1 /* PopUpViewVC.swift */,
 				A8D91AE11E712CD500E9CFEC /* Business.swift */,
 				A815DC8B1E6CE8D0007593EE /* CustomCell.swift */,
@@ -389,6 +392,7 @@
 			files = (
 				A815DC6E1E6BE5C8007593EE /* Favorites_VC.swift in Sources */,
 				A841439E1E80C247003CE16F /* PList.swift in Sources */,
+				A8D9661F1E8AA14A00C8B116 /* CustomTabBarController.swift in Sources */,
 				A815DC6A1E6BE5C8007593EE /* AppDelegate.swift in Sources */,
 				A815DC8E1E6D247B007593EE /* WhereDoYouWantToGo_VC.swift in Sources */,
 				A815DC921E6D30CB007593EE /* ListCell.swift in Sources */,
@@ -544,6 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codywalters.TriedThatPlace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -559,6 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codywalters.TriedThatPlace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

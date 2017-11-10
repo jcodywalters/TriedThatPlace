@@ -10,37 +10,11 @@ import UIKit
 
 class PopUpViewVC: UIViewController {
 
-    @IBAction func starSelected(_ sender: UIButton) {
-        favoritesList.append([selectedDataArray[businessCellIndexSelected][0], selectedDataArray[businessCellIndexSelected][1]])
-        
-        if let plist = Plist(name: "data") {
-            plist.saveFile()
-        } else {
-            print("Unable to get Plist")
-        }
-    }
+    var newListName = myLists[selectedList]
     
-    @IBAction func infoSelected(_ sender: UIButton) {
-        print(selectedDataArray)
-        let businessUrl = makeURL(dataArray: selectedDataArray[businessCellIndexSelected][1])
-        let url = NSURL(string: businessUrl)!
-        UIApplication.shared.openURL(url as URL)
-    }
-
-    @IBAction func trashSelected(_ sender: Any) {
-        BusinessList[selectedList].remove(at: businessCellIndexSelected)
-        selectedDataArray.remove(at: businessCellIndexSelected)
-        checkedBusinesses[selectedList].remove(at: businessCellIndexSelected)
-
-        if let plist = Plist(name: "data") {
-            plist.saveFile()
-        } else {
-            print("Unable to get Plist")
-        }
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-        self.removeAnimate()
-    }
+    
+    @IBOutlet weak var textBox: UITextField!
+    
     
     @IBAction func closePopUp(_ sender: Any) {
         self.removeAnimate()
@@ -49,21 +23,15 @@ class PopUpViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showAnimate()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        textBox.text = newListName
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func makeURL(dataArray: String) -> String {
-        var businessUrl = dataArray
-        let startIndex = businessUrl.index(businessUrl.startIndex, offsetBy: 9)
-        let endIndex = businessUrl.index(businessUrl.endIndex, offsetBy: -1)
-        businessUrl = businessUrl.substring(to: endIndex)
-        businessUrl = businessUrl.substring(from: startIndex)
-        return businessUrl
-    }
     
     func showAnimate()
     {
@@ -79,6 +47,25 @@ class PopUpViewVC: UIViewController {
     
     func removeAnimate()
     {
+        newListName = textBox.text!
+        myLists[selectedList] = newListName
+        
+        if let plist = Plist(name: "data") {
+            let dict = plist.getMutablePlistFile()!
+            dict["myLists"] = myLists
+            
+            do {
+                try plist.addValuesToPlistFile(dictionary: dict)
+            } catch {
+                print(error)
+            }
+            
+        } else {
+            print("Unable to get Plist")
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             self.view.alpha = 0

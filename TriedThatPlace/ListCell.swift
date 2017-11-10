@@ -11,18 +11,21 @@ import UIKit
 var businessCellIndexSelected = 0
 
 class ListCell : UITableViewCell  {
-
+    
     @IBOutlet weak var btn_CheckBox: UIButton!
     
     @IBOutlet weak var lbl_Name: UILabel!
     
     @IBOutlet weak var btn_Edit: UIButton!
     
+    @IBOutlet weak var ratingImage: UIImageView!
+    
+    
     @IBAction func checkBoxSelected(_ sender: UIButton) {
         print("\(lbl_Name.text) + was checked")
         
         if sender.currentImage == UIImage(named:"checked") {
-
+            
             sender.setImage( UIImage(named:"notChecked"), for: .normal)
             checkedBusinesses[selectedList][Int(sender.accessibilityLabel!)!] = false
             
@@ -56,11 +59,11 @@ class ListCell : UITableViewCell  {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
