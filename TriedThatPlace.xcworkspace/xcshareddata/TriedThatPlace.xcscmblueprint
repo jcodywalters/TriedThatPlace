@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F7AB79C59CB768D585AE29EE1DC589A47E03EE6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7A87F6C754C414DA7D8027B928EDBE2ECCAB82DC" : 9223372036854775807,
+    "9F7AB79C59CB768D585AE29EE1DC589A47E03EE6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3271BF63-EDB2-4B04-89C0-EE55F2CBD83E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7A87F6C754C414DA7D8027B928EDBE2ECCAB82DC" : "TriedThatPlace\/Pods\/",
+    "9F7AB79C59CB768D585AE29EE1DC589A47E03EE6" : "TriedThatPlace\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TriedThatPlace",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TriedThatPlace.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/codywalters\/triedThatPlace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A87F6C754C414DA7D8027B928EDBE2ECCAB82DC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/codywalters\/triedThatPlace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F7AB79C59CB768D585AE29EE1DC589A47E03EE6"
+    }
+  ]
+}
